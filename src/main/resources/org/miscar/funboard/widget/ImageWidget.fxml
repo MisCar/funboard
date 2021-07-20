@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import edu.wpi.first.shuffleboard.api.components.StyleableGauge?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.miscar.funboard.widget.ImageWidgetController"
+      fx:id="root"
+      spacing="8"
+      minWidth="80" minHeight="80">
+    <padding>
+        <Insets topRightBottomLeft="4"/>
+    </padding>
+    <StackPane>
+        <ImageView fx:id="image"
+                   preserveRatio="true" />
+    </StackPane>
+</VBox>
