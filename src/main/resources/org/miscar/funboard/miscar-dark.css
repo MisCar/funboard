@@ -1,9 +1,23 @@
 @import "/edu/wpi/first/shuffleboard/app/dark.css";
 
+@font-face {
+    font-family: Assistant;
+    src: url('Assistant.ttf');
+}
+
 .root {
+    -fx-font-family: "Assistant" !important;
     -swatch-100: #7e0c2b;
     -swatch-200: derive(-swatch-100, -5%);
     -swatch-300: derive(-swatch-100, -12%);
     -swatch-400: derive(-swatch-100, -16%);
     -swatch-500: derive(-swatch-100, -25%);
+}
+
+.tile {
+    -fx-background-radius: 30 !important;
+}
+
+.tile .tile-title-bar {
+    -fx-background-radius: 30 30 0 0 !important;
 }
