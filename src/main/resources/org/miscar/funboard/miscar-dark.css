@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Assistant;
-    src: url('Assistant.ttf');
+    src: url("Assistant.ttf");
 }
 
 .root {
@@ -15,9 +15,9 @@
 }
 
 .tile {
-    -fx-background-radius: 30 !important;
+    -fx-background-radius: 10 !important;
 }
 
 .tile .tile-title-bar {
-    -fx-background-radius: 30 30 0 0 !important;
+    -fx-background-radius: 10 10 0 0 !important;
 }
