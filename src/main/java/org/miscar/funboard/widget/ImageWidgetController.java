@@ -24,9 +24,6 @@ import java.util.List;
 )
 @ParametrizedController("ImageWidget.fxml")
 public final class ImageWidgetController extends SimpleAnnotatedWidget<String> {
-
-    private final StringProperty url = new SimpleStringProperty("https://miscar.github.io/icon.png");
-
     @FXML
     private Pane root;
 
@@ -35,11 +32,11 @@ public final class ImageWidgetController extends SimpleAnnotatedWidget<String> {
 
     @FXML
     private void initialize() {
-        url.addListener((__, oldUrl, newUrl) -> {
+        dataOrDefault.addListener((__, oldUrl, newUrl) -> {
             image.setImage(new Image(newUrl));
         });
 
-        image.setImage(new Image("https://miscar.github.io/icon.png"));
+        image.setImage(new Image("file://C:\\Users\\progr\\Developer\\2022-robot\\src\\main\\resources\\images\\kumkum.png"));
 
         root.widthProperty().addListener((__, oldWidth, newWidth) -> {
             image.setFitWidth((double)newWidth - 10);
@@ -57,6 +54,6 @@ public final class ImageWidgetController extends SimpleAnnotatedWidget<String> {
 
     @Override
     public List<Group> getSettings() {
-        return ImmutableList.of(Group.of("Miscellaneous", Setting.of("URL", "The image url", url, String.class)));
+        return ImmutableList.of();
     }
 }
